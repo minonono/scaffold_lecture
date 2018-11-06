@@ -1,0 +1,58 @@
+<br>
+<br>
+<div class ="container">
+    <div class="bborder">
+        <div class="show_title">제목 : <%=@post.title %> </div>
+        <div class="show_editor">작성자 : <%=@post.editor %></div>
+        <div class="show_content">내용 : <%=@post.content %> <br><br><br><br></div>
+    </div>
+    
+    <div class="change">
+        <a style="color: #ef7c82; padding-right: 20px; " href ="/board/edit/<%= @post.id %>"> 수정</a>
+        <a style="color: #ef7c82; padding-right: 20px; " href ="/board/delete/<%= @post.id %>"> 삭제</a>
+    </div>    
+</div>
+
+<style>
+.container {
+    font-family: GulimChe;
+}
+
+.bborder {
+    border-style: hidden;
+    padding: 20px 25px 25px 0;
+}
+
+.change {
+    text-align: right;
+    font-size: 20px;
+}
+
+.show_title {
+    text-align: center;
+    font-size: 30px;
+    padding: 0px 5px 5px 0;
+}
+
+.show_editor {
+    border-style: hidden hidden solid hidden;
+    border-color: #a8a8a3;
+    border-width: 0.1px;
+    text-align: right;
+    font-size: 23px;
+    padding: 15px 5px 10px 0;
+
+}
+
+.show_content {
+    border-style: hidden hidden solid hidden;
+    border-color: #a8a8a3;
+    border-width: 0.1px;
+    padding-left: 0;
+    padding-top: 15px;
+    
+    font-size: 20px;
+    
+
+}
+</style>

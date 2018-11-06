@@ -1,0 +1,54 @@
+<!--글 목록 보여주기-->
+<br>
+<div class="container">
+    <h1 class="list">글 목록</h1>
+    <br>
+    <br>
+    <br>
+    <div class="new_write">
+    <a class="new_write_color" href = "/board/new">새로운 글쓰기</a>
+    </div>
+    <% @post_all.each do |m| %>
+        <div>
+            <hr>
+            <div class="title">
+            <a class="title_color" href ="/board/show/<%= m.id %>">
+                제목: <%= m.title %> 
+                <br>
+            </a>
+            </div>
+            작성자: <%= m.editor%>
+        </div>
+    <% end %>
+</div>
+
+<style>
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+.container {
+    margin-bottom: 40px;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+.list {
+    text-align: center;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.title_color {
+    color: #706f6f;
+}
+
+.new_write {
+    text-align: right;
+    font-size: 18px;
+}
+
+.new_write_color {
+    color: #ef7c82;
+}
+
+</style>
