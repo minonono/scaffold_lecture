@@ -20,14 +20,11 @@ class BoardController < ApplicationController
     #포스팅 저장하기
     
     # Parameters: {"title"=>"ss", "editor"=>"ss", "content"=>"sss"}
-    @title = params[:title]
-    @editor = params[:editor]
-    @content = params[:content]
     
     new_post = Post.new
-    new_post.title = @title
-    new_post.editor = @editor
-    new_post.content = @content
+    new_post.title = params[:title]
+    new_post.editor = params[:editor]
+    new_post.content = params[:content]
     new_post.save
     
     redirect_to "/"
