@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :registers
+  
   get 'board/new'
 
   get 'board/show'
